@@ -3,14 +3,15 @@ import React, { useState, useEffect } from 'react';
 import { Menu, X, Sun, Moon, Search } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import logo from '../assets/file.svg'
 
 const navItems = [
   { name: 'Home', href: '/' },
-  { name: 'Stories', href: '/stories' },
+  { name: 'About Us', href: '/about-us' },
   { name: 'Works', href: '/works' },
-  { name: 'Pages', href: '/pages' },
+  { name: 'Services', href: '/services' },
   { name: 'Contact', href: '/contact' },
-  { name: 'Shop', href: '/shop' },
+  { name: 'Community', href: '/community' },
 ];
 
 const staggerVariants = {
@@ -122,7 +123,7 @@ const Navbar = () => {
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
-            <motion.div
+            {/* <motion.div
               className="flex items-center"
               variants={logoVariants}
               initial="hidden"
@@ -141,6 +142,21 @@ const Navbar = () => {
                   m
                 </span>
               </div>
+            </motion.div> */}
+
+            <motion.div
+              className="flex items-center"
+              variants={logoVariants}
+              initial="hidden"
+              animate={isVisible ? 'show' : 'hidden'}
+            >
+              <Link to="/">
+                <img
+                  src={logo}
+                  alt="Logo"
+                  className="h-10 w-auto object-contain"
+                />
+              </Link>
             </motion.div>
 
             <motion.div

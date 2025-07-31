@@ -1,7 +1,12 @@
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
 import ServiceCard from '../components/ServiceCard';
+// eslint-disable-next-line no-unused-vars
 import { motion } from 'framer-motion';
+import AboutUsSection from '../components/AboutUs';
+import PartnersSection from '../components/PartnersSection';
+
+
 
 const images = [
   'https://images.unsplash.com/photo-1570197781348-18eac46ebc9b?auto=format&fit=crop&w=600&q=80',
@@ -63,7 +68,7 @@ const Home = () => {
                 variants={staggerItem}
                 className="text-gray-300 text-sm sm:text-base leading-relaxed max-w-md"
               >
-                Efficiently plagiarize leveraged quality vectors whereas principle-centered human capital. Dramatically initiate intermandated quality vectors before web-enabled innovation.
+              We bridge bold ideas with seamless execution — building meaningful experiences that move people and markets. Every interaction, design, and decision is made to inspire trust and deliver excellence.
               </motion.p>
               <motion.button
                 variants={staggerItem}
@@ -71,7 +76,7 @@ const Home = () => {
                 whileTap={{ scale: 0.95 }}
                 className="group bg-white text-black px-8 py-4 rounded-full font-medium text-sm sm:text-base hover:bg-gray-100 transition-all duration-300 flex items-center gap-3"
               >
-                START PROJECT
+                LET’S BUILD TOGETHER 
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
               </motion.button>
             </motion.div>
@@ -135,6 +140,10 @@ const Home = () => {
         <div className="absolute bottom-1/3 right-1/4 w-1 h-1 bg-white rounded-full opacity-30 animate-pulse delay-1000"></div>
         <div className="absolute top-1/3 right-1/3 w-1.5 h-1.5 bg-white rounded-full opacity-10 animate-pulse delay-500"></div>
       </section>
+
+            {/* AboutUs Section  */}
+            <AboutUsSection/>
+
 
       {/* Services Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -221,6 +230,11 @@ const Home = () => {
           </motion.a>
         </div>
       </section>
+
+      {/* Collaborators Section */}
+      <PartnersSection/>
+        
+
     </div>
   );
 };
